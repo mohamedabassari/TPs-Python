@@ -2,7 +2,7 @@ class Personne:
     def __init__(self,nom):
         self.nom=nom
         self.amis=[]
-    def ajouter_amis(self,ami):
+    def ajouter_amis(self,*ami):
         if ami not in self.amis:
             self.amis.append(ami)
         else :
@@ -16,10 +16,7 @@ class Personne:
                 print(f" - {ami}")
 
 
-if __name__ == "__main__":
-    
-    personne = Personne("Mohamed")
 
-personne.ajouter_amis("Mohamed")
-personne.ajouter_amis("Abdellah")
+personne = Personne("Mohamed")
+personne.ajouter_amis("Mohamed","abdellah","achraf")
 personne.afficher_amis()        
